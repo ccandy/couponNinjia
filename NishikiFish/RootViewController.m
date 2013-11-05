@@ -60,6 +60,7 @@
 	// we return YES only in the Portrait orientation
 	//
 	return ( interfaceOrientation == UIInterfaceOrientationPortrait );
+    //return NO;
 	
 #elif GAME_AUTOROTATION==kGameAutorotationCCDirector
 	//
@@ -67,15 +68,17 @@
 	//
 	// Sample: Autorotate only in landscape mode
 	//
+    /*
 	if( interfaceOrientation == UIInterfaceOrientationLandscapeLeft ) {
-		[[CCDirector sharedDirector] setDeviceOrientation: kCCDeviceOrientationLandscapeRight];
+		[[CCDirector sharedDirector] setDeviceOrientation: kCCDeviceOrientationLandscapeLeft];
 	} else if( interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
 		[[CCDirector sharedDirector] setDeviceOrientation: kCCDeviceOrientationLandscapeLeft];
-	}
+	}*/
 	
 	// Since this method should return YES in at least 1 orientation, 
 	// we return YES only in the Portrait orientation
 	return ( interfaceOrientation == UIInterfaceOrientationPortrait );
+    //return NO;
 	
 #elif GAME_AUTOROTATION == kGameAutorotationUIViewController
 	//
@@ -84,7 +87,7 @@
 	// Sample: Autorotate only in landscpe mode
 	//
 	// return YES for the supported orientations
-	
+	//return NO;
 	return ( UIInterfaceOrientationIsLandscape( interfaceOrientation ) );
 	
 #else
